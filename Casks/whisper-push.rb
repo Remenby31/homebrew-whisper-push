@@ -20,9 +20,7 @@ cask "whisper-push" do
 
   app "Whisper Push.app"
 
-  postflight do
-    ohai "Whisper Push downloads a speech model (~550 MB) on first launch."
-  end
+  caveats "Whisper Push downloads a speech model (~550 MB) on first launch."
 
   uninstall launchctl: "com.whisper-push.app",
             quit:      "com.whisper-push.app"
