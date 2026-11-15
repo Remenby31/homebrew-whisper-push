@@ -15,7 +15,7 @@ cask "whisper-push" do
   desc "Push-to-talk voice dictation, 100% local"
   homepage "https://github.com/Remenby31/whisper-push"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
   depends_on arch: :arm64
 
   app "Whisper Push.app"
