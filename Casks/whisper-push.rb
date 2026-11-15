@@ -15,12 +15,10 @@ cask "whisper-push" do
   desc "Push-to-talk voice dictation, 100% local"
   homepage "https://github.com/Remenby31/whisper-push"
 
-  depends_on macos: :ventura
   depends_on arch: :arm64
+  depends_on macos: :ventura
 
   app "Whisper Push.app"
-
-  caveats "Whisper Push downloads a speech model (~550 MB) on first launch."
 
   uninstall launchctl: "com.whisper-push.app",
             quit:      "com.whisper-push.app"
@@ -29,4 +27,6 @@ cask "whisper-push" do
     "~/Library/Application Support/whisper-push",
     "~/Library/LaunchAgents/com.whisper-push.app.plist",
   ]
+
+  caveats "Whisper Push downloads a speech model (~550 MB) on first launch."
 end
